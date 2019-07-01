@@ -1,2 +1,0 @@
-# VueMenuCreator
-Created with CodeSandbox
