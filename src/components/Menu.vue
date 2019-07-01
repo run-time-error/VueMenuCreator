@@ -1,8 +1,13 @@
 <template>
   <div>
     <ul>
-      <ListItem v-for="item in menus" :name="item.title" :children="item.children" 
-      :key="item.title"/>
+      <ListItem
+        v-for="item in menus"
+        :name="item.title"
+        :children="item.children"
+        :edit="edit"
+        :key="item.title"
+      />
     </ul>
   </div>
 </template>
@@ -12,7 +17,7 @@ import ListItem from "./ListItem";
 export default {
   name: "Menu",
   props: {
-    // name: String
+    edit: Boolean
   },
   components: {
     ListItem

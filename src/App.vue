@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Menu/>
+    <Menu :edit="canEdit"/>
+    <button type="button" @click="edit">Show Buttons</button>
   </div>
 </template>
 
@@ -11,6 +12,16 @@ export default {
   name: "App",
   components: {
     Menu
+  },
+  data() {
+    return {
+      canEdit: false
+    };
+  },
+  methods: {
+    edit() {
+      this.canEdit = !this.canEdit;
+    }
   }
 };
 </script>
